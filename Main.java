@@ -12,8 +12,10 @@ public class Main {
             switch (op) {
                 case "1":
                     System.out.println("Agendar");
+                    break;
                 case "2":
                     System.out.println("Printar");
+                    break;
                 case "3":
                     System.out.println("Escolhe a operacao administrativa escolhida:");
                     System.out.println("1- Adicionar paciente\n2- Remover paciente\n3-Aidiconar medico\n4- Remover medico\n5- Trocar senha\nOutro- Sair");
@@ -31,11 +33,10 @@ public class Main {
                         case "4":
                             agenda.removeMedico();
                             break;
-                        case "5":
-                            agenda.trocarSenha();
-                            break;
+                            case "5":
+                                agenda.trocarSenha();
+                                break;
                     }
-                default:
                     break;
             }
         }

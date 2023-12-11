@@ -15,4 +15,36 @@ public class Consulta {
         this.hora = hora;
         this.minuto = minuto;
     }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public int getDia() {
+        return dia;
+    }
+
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public int getHora() {
+        return hora;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public int getMinuto() {
+        return minuto;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
 }
