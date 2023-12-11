@@ -21,4 +21,8 @@ public class Medico extends Pessoa {
     public float getSalario() {
         return salario;
     }
+
+    public String toString() {
+        return "Nome: " + getNome() + "\nCPF: " + getCpf() + "\nCRM: " + getCrm() + "\nEspecialidade: " + getEspecialidade() + "\nSalario: " + getSalario();
+    }
 }

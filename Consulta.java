@@ -1,12 +1,10 @@
 public class Consulta {
-    String especialidade;
     Paciente paciente;
     Medico medico;
-    int dia, mes, ano;
-    int hora, minuto;
+    String dia, mes, ano;
+    String hora, minuto;
 
-    Consulta(String especialidade, Paciente paciente, Medico medico, int dia, int mes, int ano, int hora, int minuto) {
-        this.especialidade = especialidade;
+    Consulta(Paciente paciente, Medico medico, String dia, String mes, String ano, String hora, String minuto) {
         this.paciente = paciente;
         this.medico = medico;
         this.dia = dia;
@@ -16,19 +14,15 @@ public class Consulta {
         this.minuto = minuto;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public int getDia() {
+    public String getDia() {
         return dia;
     }
 
-    public String getEspecialidade() {
-        return especialidade;
-    }
-
-    public int getHora() {
+    public String getHora() {
         return hora;
     }
 
@@ -36,11 +30,11 @@ public class Consulta {
         return medico;
     }
 
-    public int getMes() {
+    public String getMes() {
         return mes;
     }
 
-    public int getMinuto() {
+    public String getMinuto() {
         return minuto;
     }
 

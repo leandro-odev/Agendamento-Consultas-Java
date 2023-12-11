@@ -15,4 +15,8 @@ public class Paciente extends Pessoa {
     public String getCartaoSus() {
         return cartaoSus;
     }
+
+    public String toString() {
+        return "Nome: " + getNome() + "\nCPF: " + getCpf() + "\nCartao SUS: " + getCartaoSus() + "\nTipo de atendimento: " + getAtendimento();
+    }
 }

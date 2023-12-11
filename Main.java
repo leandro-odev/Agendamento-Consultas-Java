@@ -11,14 +11,14 @@ public class Main {
             String op = input.nextLine();
             switch (op) {
                 case "1":
-                    System.out.println("Agendar");
+                    agenda.agendarConsulta();
                     break;
                 case "2":
                     System.out.println("Printar");
                     break;
                 case "3":
                     System.out.println("Escolhe a operacao administrativa escolhida:");
-                    System.out.println("1- Adicionar paciente\n2- Remover paciente\n3-Aidiconar medico\n4- Remover medico\n5- Trocar senha\nOutro- Sair");
+                    System.out.println("1- Adicionar paciente\n2- Remover paciente\n3-Aidiconar medico\n4- Remover medico\n5- Trocar senha\n6- Verificar pacientes e medicos\nOutro- Sair");
                     String opp = input.nextLine();
                     switch (opp) {
                         case "1":
@@ -33,9 +33,12 @@ public class Main {
                         case "4":
                             agenda.removeMedico();
                             break;
-                            case "5":
-                                agenda.trocarSenha();
-                                break;
+                        case "5":
+                            agenda.trocarSenha();
+                            break;
+                        case "6":
+                            agenda.printPessoas();
+                            break;
                     }
                     break;
             }
