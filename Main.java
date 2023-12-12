@@ -41,9 +41,9 @@ public class Main {
                             break;
                     }
             }
-            if (!op.equals("1") || !op.equals("2") || !op.equals("3")) {
-                break;
-            }
+            // if (!op.equals("1") || !op.equals("2") || !op.equals("3")) {
+            //     break;
+            // }
         }
     }
 }
