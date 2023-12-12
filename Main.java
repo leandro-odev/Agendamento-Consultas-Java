@@ -14,7 +14,7 @@ public class Main {
                     agenda.agendarConsulta();
                     break;
                 case "2":
-                    System.out.println("Printar");
+                    agenda.printConsultas();
                     break;
                 case "3":
                     System.out.println("Escolhe a operacao administrativa escolhida:");
@@ -40,7 +40,9 @@ public class Main {
                             agenda.printPessoas();
                             break;
                     }
-                    break;
+            }
+            if (!op.equals("1") || !op.equals("2") || !op.equals("3")) {
+                break;
             }
         }
     }

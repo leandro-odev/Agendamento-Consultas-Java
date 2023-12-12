@@ -68,8 +68,7 @@ public class Agenda {
             }
 
             if (is_valid) {
-                Consulta consulta = new Consulta(paciente, medico, dia, mes, ano, hora, minuto);
-                consultas_marcadas.add(consulta);
+                consultas_marcadas.add(new Consulta(paciente, medico, dia, mes, ano, hora, minuto));
                 break;
             }
             
@@ -79,13 +78,31 @@ public class Agenda {
     public void printConsultas() {
         System.out.println("Lista de consultas:\n");
         for(int i = 0; i < consultas_marcadas.size(); i++) {
-            System.out.println("Paciente: " + consultas_marcadas.get(i).getPaciente().getNome());
-            System.out.println("Medico: " + consultas_marcadas.get(i).getMedico().getNome());
-            System.out.println("Data: " + consultas_marcadas.get(i).getDia() + "/" + consultas_marcadas.get(i).getMes() + "/" + consultas_marcadas.get(i).getAno());
-            System.out.println("Horario: " + consultas_marcadas.get(i).getHora() + ":" + consultas_marcadas.get(i).getMinuto());
-            System.out.println("--------------------------------------------------");
+            Consulta consulta = consultas_marcadas.get(i);
+            if (consulta.getPaciente() != null && consulta.getMedico() != null) {
+                System.out.println("Paciente: " + consulta.getPaciente().getNome());
+                System.out.println("Medico: " + consulta.getMedico().getNome());
+                System.out.println("Exame: " + consulta.getPaciente().getAtendimento());
+                System.out.println("Data: " + consulta.getDia() + "/" + consulta.getMes() + "/" + consulta.getAno());
+                System.out.println("Horario: " + consulta.getHora() + ":" + consulta.getMinuto());
+                System.out.println("--------------------------------------------------");
+            } else {
+                System.out.println("Paciente is null for consulta at index " + i);
+            }
         }
     }
+
+    // public void printConsultas() {
+    //     System.out.println("Lista de consultas:\n");
+    //     for(int i = 0; i < consultas_marcadas.size(); i++) {
+    //         System.out.println("Paciente: " + consultas_marcadas.get(i).getPaciente().getNome());
+    //         System.out.println("Medico: " + consultas_marcadas.get(i).getMedico().getNome());
+    //         System.out.println("Exame: " + consultas_marcadas.get(i).getPaciente().getAtendimento());
+    //         System.out.println("Data: " + consultas_marcadas.get(i).getDia() + "/" + consultas_marcadas.get(i).getMes() + "/" + consultas_marcadas.get(i).getAno());
+    //         System.out.println("Horario: " + consultas_marcadas.get(i).getHora() + ":" + consultas_marcadas.get(i).getMinuto());
+    //         System.out.println("--------------------------------------------------");
+    //     }
+    // }
 
     public void printPessoas() {
         System.out.println("Lista de pacientes:\n");
